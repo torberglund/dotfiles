@@ -1,0 +1,14 @@
+# Never track secrets or keys
+.ssh/
+.gnupg/
+.cache/
+.config/
+.local/
+.mozilla/
+.pki/
+Downloads/
+Pictures/
+Videos/
+Documents/
+Code/
+Projects/
