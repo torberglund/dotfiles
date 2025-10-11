@@ -1,0 +1,7 @@
+alias dot='git --git-dir=/home/tor/.dotfiles/ --work-tree=/home/tor'
+alias cp='cp -i'; alias mv='mv -i'; alias rm='rm -i'
+alias ll='ls -alF'; alias la='ls -A'; alias ..='cd ..'; alias ...='cd ../..'; alias c='clear'
+alias gs='git status'; alias ga='git add .'; alias gc='git commit -m'; alias gp='git push'; alias gco='git checkout'; alias gb='git branch'; alias gl='git log --oneline --graph --decorate'
+alias venv='(command -v python3 >/dev/null && python3 -m venv venv || python -m venv venv) && . venv/bin/activate'
+alias server-local='python3 -m http.server --bind 127.0.0.1'
+alias server-lan='python3 -m http.server'
