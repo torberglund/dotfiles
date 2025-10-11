@@ -1,3 +1,7 @@
 [user]
 	name = Tor Habberstad
 	email = tor.berglund@gmail.com
+[core]
+	editor = nano
+[push]
+	autoSetupRemote = true
