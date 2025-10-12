@@ -116,3 +116,10 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zsh/aliases.zsh ]; then
   source ~/.zsh/aliases.zsh
 fi
+# Start ssh-agent if not already running
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)"
+fi
+
+# Add SSH key silently if available
+ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
