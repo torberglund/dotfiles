@@ -5,5 +5,5 @@ alias gs='git status'; alias ga='git add .'; alias gc='git commit -m'; alias gp=
 alias venv='(command -v python3 >/dev/null && python3 -m venv venv || python -m venv venv) && . venv/bin/activate'
 alias server-local='python3 -m http.server --bind 127.0.0.1'
 alias server-lan='python3 -m http.server'
-alias snapcreate='sudo snapper create --description "$(date +"%Y-%m-%d %H:%M:%S") - ${1:-manual}"'
+alias snapcreate='sudo snapper -c root create --userdata "important=yes" --description'
 codex-u='npm install -g @openai/codex@latest'
