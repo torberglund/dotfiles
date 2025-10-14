@@ -123,3 +123,4 @@ fi
 
 # Add SSH key silently if available
 ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
+cd ~
