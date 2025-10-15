@@ -120,7 +120,38 @@ fi
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
   eval "$(ssh-agent -s)"
 fi
+# ~/.zshrc addition — start or connect to ssh-agent safely
+# Works on Linux, Raspberry Pi, NAS, etc.
 
-# Add SSH key silently if available
-ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
+# Function: ensure ssh-agent is running and connected
+start_ssh_agent() {
+  # If SSH_AUTH_SOCK is already valid, skip everything
+  if [ -S "$SSH_AUTH_SOCK" ]; then
+    return
+  fi
+
+  # Try to find an existing agent socket owned by this user
+  local sock
+  sock=$(find /tmp -type s -name 'agent.*' -user "$USER" 2>/dev/null | head -n 1)
+
+  if [ -n "$sock" ]; then
+    export SSH_AUTH_SOCK="$sock"
+    echo "✅ Reconnected to existing ssh-agent socket."
+  else
+    echo "🔑 Starting a new ssh-agent..."
+    eval "$(ssh-agent -s)" >/dev/null
+  fi
+}
+
+# Run it once per session
+start_ssh_agent
+
+# Optionally add your key (if it exists and not already loaded)
+if [ -f ~/.ssh/id_ed25519 ]; then
+  ssh-add -l >/dev/null 2>&1 || {
+    echo "🪪 Adding SSH key (~/.ssh/id_ed25519)..."
+    ssh-add ~/.ssh/id_ed25519 </dev/tty
+  }
+fi
+
 cd ~
