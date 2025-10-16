@@ -117,9 +117,6 @@ if [ -f ~/.zsh/aliases.zsh ]; then
   source ~/.zsh/aliases.zsh
 fi
 
-if [ -f ~/.zsh/make_venv.sh ]; then
-  source ~/.zsh/make_venv.sh
-fi
 
 # Start ssh-agent if not already running
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then

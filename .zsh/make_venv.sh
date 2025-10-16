@@ -16,8 +16,7 @@ if [[ ! -d "$VENV_DIR" ]]; then
 fi
 
 # shellcheck disable=SC1091
-source "$VENV_DIR/bin/activate"
-
+alias make_venv="~/.zsh/make_venv.sh"
 pip install --upgrade pip
 
 if [[ -f "$REQUIREMENTS_FILE" ]]; then
@@ -27,3 +26,4 @@ else
 fi
 
 echo "Virtual environment ready at '$VENV_DIR'."
+alias make_venv="~/.zsh/make_venv.sh"
