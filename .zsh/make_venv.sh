@@ -26,4 +26,4 @@ else
 fi
 
 echo "Virtual environment ready at '$VENV_DIR'."
-alias make_venv="~/.zsh/make_venv.sh"
+echo "👉 To activate it, run: source $VENV_DIR/bin/activate"
