@@ -11,3 +11,4 @@ alias safe-upgrade='sudo timeshift --create --comments "Before apt upgrade" && s
 alias make_venv="~/.zsh/make_venv.sh"
 alias gh-new='echo -n "Repository name: "; read repo; gh repo create "$repo" --private --source=. --remote=origin --push --confirm'
 alias od='cd "/mnt/c/Users/TorHabberstad/OneDrive - Personalkollen Sverige AB"'
+alias down='cd /mnt/c/Users/TorHabberstad/Downloads'
