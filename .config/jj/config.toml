@@ -1,0 +1,19 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "Tor Habberstad"
+email = "tor.berglund@gmail.com"
+
+[aliases]
+# --- Git muscle memory ---
+st = ["status"]
+sw = ["switch"]
+gc = ["commit"]
+amend = ["commit", "--amend"]
+lg = ["log", "-r", "all()", "-T", "commit_id.short() ++ \" \" ++ description"]
+gp = ["git", "push"]
+rb = ["rebase", "-d", "remote-tracking()"]   # like git pull --rebase
+
+# --- JJ-specific convenience ---
+undo = ["uncommit"]                          # undo last commit, keep changes
+sync = ["git", "fetch", "&&", "rebase", "-d", "remote-tracking()"]
