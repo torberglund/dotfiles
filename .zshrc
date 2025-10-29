@@ -157,3 +157,8 @@ if [ -f ~/.ssh/id_ed25519 ]; then
 fi
 
 cd ~
+
+jjsync() {
+  jj git fetch
+  jj rebase -d remote-tracking()
+}
