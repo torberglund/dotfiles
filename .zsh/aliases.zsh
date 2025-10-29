@@ -13,3 +13,4 @@ alias gh-new='echo -n "Repository name: "; read repo; gh repo create "$repo" --p
 alias od='cd "/mnt/c/Users/TorHabberstad/OneDrive - Personalkollen Sverige AB"'
 alias down='cd /mnt/c/Users/TorHabberstad/Downloads'
 alias codex='codex --dangerously-bypass-approvals-and-sandbox'
+alias jjsync='jj git fetch && jj rebase -d remote-tracking()'

@@ -15,4 +15,3 @@ rb = ["rebase", "-d", "remote-tracking()"]
 
 # JJ-specific
 uncommit = ["uncommit"]
-sync = [["git", "fetch"], ["rebase", "-d", "remote-tracking()"]]
