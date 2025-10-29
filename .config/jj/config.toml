@@ -15,5 +15,8 @@ gp = ["git", "push"]
 rb = ["rebase", "-d", "remote-tracking()"]   # like git pull --rebase
 
 # --- JJ-specific convenience ---
-undo = ["uncommit"]                          # undo last commit, keep changes
-sync = ["git", "fetch", "&&", "rebase", "-d", "remote-tracking()"]
+uncommit = ["uncommit"]                          # undo last commit, keep changes
+sync = [
+  "git", "fetch",
+  "rebase", "-d", "remote-tracking()"
+]
