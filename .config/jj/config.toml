@@ -5,18 +5,14 @@ name = "Tor Habberstad"
 email = "tor.berglund@gmail.com"
 
 [aliases]
-# --- Git muscle memory ---
 st = ["status"]
 sw = ["switch"]
 gc = ["commit"]
 amend = ["commit", "--amend"]
 lg = ["log", "-r", "all()", "-T", "commit_id.short() ++ \" \" ++ description"]
 gp = ["git", "push"]
-rb = ["rebase", "-d", "remote-tracking()"]   # like git pull --rebase
+rb = ["rebase", "-d", "remote-tracking()"]
 
-# --- JJ-specific convenience ---
-uncommit = ["uncommit"]                          # undo last commit, keep changes
-sync = [
-  "git", "fetch",
-  "rebase", "-d", "remote-tracking()"
-]
+# JJ-specific
+uncommit = ["uncommit"]
+sync = [["git", "fetch"], ["rebase", "-d", "remote-tracking()"]]
