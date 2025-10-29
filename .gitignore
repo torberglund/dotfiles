@@ -3,6 +3,8 @@
 .gnupg/
 .cache/
 .config/
+!.config/
+!.config/jj/
 .local/
 .mozilla/
 .pki/
