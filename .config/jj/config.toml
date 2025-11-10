@@ -1,17 +1,5 @@
 #:schema https://jj-vcs.github.io/jj/latest/config-schema.json
 
 [user]
-name = "Tor Habberstad"
+name  = "Tor Habberstad"
 email = "tor.berglund@gmail.com"
-
-[aliases]
-st = ["status"]
-sw = ["switch"]
-gc = ["commit"]
-amend = ["commit", "--amend"]
-lg = ["log", "-r", "all()", "-T", "commit_id.short() ++ \" \" ++ description"]
-gp = ["git", "push"]
-rb = ["rebase", "-d", "remote-tracking()"]
-
-# JJ-specific
-uncommit = ["uncommit"]
