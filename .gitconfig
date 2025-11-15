@@ -7,3 +7,7 @@
 	autoSetupRemote = true
 [pull]
 	rebase = true
+[safe]
+	directory = /mnt/gdrive-th/gdrive-scripts/autosorter
+	directory = /mnt/gdrive-th/scripts/autosorte
+	directory = /mnt/gdrive-th/scripts/autosorter
