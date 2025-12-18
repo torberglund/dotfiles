@@ -6,7 +6,7 @@ alias venv='(command -v python3 >/dev/null && python3 -m venv venv || python -m 
 alias server-local='python3 -m http.server 9000 --bind 127.0.0.1'
 alias server-lan='python3 -m http.server 9000'
 alias snapcreate='sudo snapper -c root create --userdata "important=yes" --description'
-alias codex-u='sudo npm install -g @openai/codex@latest'
+alias codex-u='npm install -g @openai/codex@latest'
 alias safe-upgrade='sudo timeshift --create --comments "Before apt upgrade" && sudo apt update && sudo apt upgrade -y'
 alias make_venv="~/.zsh/make_venv.sh"
 alias gh-new='echo -n "Repository name: "; read repo; gh repo create "$repo" --private --source=. --remote=origin --push --confirm'
