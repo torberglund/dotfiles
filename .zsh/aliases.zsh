@@ -12,7 +12,7 @@ alias make_venv="~/.zsh/make_venv.sh"
 alias gh-new='echo -n "Repository name: "; read repo; gh repo create "$repo" --private --source=. --remote=origin --push --confirm'
 alias od='cd "/mnt/c/Users/TorHabberstad/OneDrive - Personalkollen Sverige AB"'
 alias down='cd /mnt/c/Users/TorHabberstad/Downloads'
-alias codex='codex --dangerously-bypass-approvals-and-sandbox'
+alias codex='command codex --dangerously-bypass-approvals-and-sandbox'
 alias stdvenv='source ~/.stdvenv/bin/activate'
 alias mountgdriveth='sudo mkdir -p /mnt/gdrive-th && sudo mount -t nfs nas:/volume1/gdrive-th /mnt/gdrive-th'
 alias mountmedia='sudo mkdir -p /mnt/media && sudo mount -t nfs nas:/volume1/media /mnt/media'
